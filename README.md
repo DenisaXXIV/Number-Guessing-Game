@@ -1,8 +1,12 @@
 # Number-Guessing-Game
 
-" Welcome to Number Guessing Game! We have selected a random number between 1 and 100. See if you can guess it in 5 turns or fewer. We'll tell you if your guess was too high or too low. You have Maximum 5 Attemp Limit. Succes! "
+A number guessing game is a simple guessing game where a user is supposed to guess a number between 0 and 100 in a maximum of 5 attempts. The game will end after 5 attempts and if the player failed to guess the number, and then he loses the game.
+
+</br>
 
 <img src="https://github.com/DenisaXXIV/Number-Guessing-Game/blob/master/img/Game.png" align="center"/>
+
+</br>
 
 ## Made with
 
