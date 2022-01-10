@@ -28,7 +28,7 @@ public class MyWindow {
 
         //Button
         Button buton = new Button(" Submit ");
-        buton.setBounds(665, 550, 120, 35);
+        buton.setBounds(665, 600, 120, 35);
         buton.setFont(new Font("Serif", Font.PLAIN, 30));
         buton.setBackground(Color.WHITE);
         frame1.add(buton);
@@ -48,15 +48,15 @@ public class MyWindow {
         frame1.add(logoIcon);
 
         //Text
-        Text welcome = new Text(frame1, 500, 250, "Welcome to Number Guessing Game!", 1700, 50);
-        Text task = new Text(frame1, 25, 300, "We have selected a random number between 1 and 100. See if you " +
+        Text welcome = new Text(frame1, 500, 300, "Welcome to Number Guessing Game!", 1700, 50);
+        Text task = new Text(frame1, 25, 350, "We have selected a random number between 1 and 100. See if you " +
                 "can guess it in 5 turns or fewer. We'll tell you if your", 1700, 50);
-        Text task2 = new Text(frame1, 25, 340, "guess was too high or too low. Succes!", 1700, 50);
+        Text task2 = new Text(frame1, 25, 390, "guess was too high or too low. Succes!", 1700, 50);
 
         //Spinner
         SpinnerModel value = new SpinnerNumberModel(50, 1, 100, 1);
         JSpinner spinner = new JSpinner(value);
-        spinner.setBounds(650, 500, 150, 30);
+        spinner.setBounds(650, 550, 150, 30);
         spinner.setFont(new Font("Serif", Font.PLAIN, 20));
         frame1.add(spinner);
 
