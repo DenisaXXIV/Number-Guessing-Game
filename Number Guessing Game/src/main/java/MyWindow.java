@@ -50,7 +50,7 @@ public class MyWindow {
         //Text
         Text welcome = new Text(frame1, 500, 250, "Welcome to Number Guessing Game!", 1700, 50);
         Text task = new Text(frame1, 25, 300, "We have selected a random number between 1 and 100. See if you" +
-                "can guess it in 10 turns or fewer. We'll tell you if your", 1700, 50);
+                "can guess it in 5 turns or fewer. We'll tell you if your", 1700, 50);
         Text task2 = new Text(frame1, 25, 340, "guess was too high or too low. You have Maximum 5 Attemp Limit. Succes!", 1700, 50);
 
         //Spinner
