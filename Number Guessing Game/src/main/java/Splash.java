@@ -18,7 +18,7 @@ public class Splash extends JFrame {
 
         ImageIcon fundalIcon = new ImageIcon("src/main/resources/fundalLoad.png");
         Image fundalImage = fundalIcon.getImage();
-        Image newFundal = fundalImage.getScaledInstance(700, 400,  java.awt.Image.SCALE_SMOOTH);
+        Image newFundal = fundalImage.getScaledInstance(700, 400, java.awt.Image.SCALE_SMOOTH);
         fundalIcon = new ImageIcon(newFundal);
         JLabel fundalLabel;
         fundalLabel = new JLabel(fundalIcon);
@@ -29,7 +29,7 @@ public class Splash extends JFrame {
         pbar.setMinimum(0);
         pbar.setMaximum(100);
         pbar.setStringPainted(true);
-        pbar.setForeground(Color.pink);
+        pbar.setForeground(new Color(66, 41, 36, 158));
         add(fundalLabel);
         add(pbar);
         pbar.setPreferredSize(new Dimension(310, 30));

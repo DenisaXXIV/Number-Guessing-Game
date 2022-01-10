@@ -2,7 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Notice {
-    void setNotice(int cases) {
+    boolean guess = false;
+
+    void SetNotice(int cases) {
         switch (cases) {
             case 1:
                 JFrame corect = new JFrame("You won!");
@@ -15,19 +17,19 @@ public class Notice {
                 corect.setLocation(-10, 0);
 
                 //Text
-                Text win = new Text(corect, 10, 20, "You're right! You have to be a clairvoyant! You Win the Game!", 1700, 50);
+                Text win = new Text(corect, 10, 20, "You're right! You have to be a", 1700, 50);
+                Text win2 = new Text(corect, 10, 60, "clairvoyant! You Win the Game!", 1700, 50);
 
                 //setez dimensiunea ferestrei
-                corect.setUndecorated(true);
                 corect.setSize(500, 300);
                 corect.setLayout(null);
-                corect.setLocation(720, 375);
+                corect.setLocation(550, 375);
                 corect.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
                 //fac fereastra vizibila
                 corect.setVisible(true);
 
-                Fundal funal1 = new Fundal(corect);
+                corect.setBackground(Color.WHITE);
 
                 break;
             case 2:
@@ -44,17 +46,18 @@ public class Notice {
                 Text smaller = new Text(small, 10, 20, "Your Guess Number is Smaller.", 1700, 50);
 
                 //setez dimensiunea ferestrei
-                small.setUndecorated(true);
                 small.setSize(500, 300);
                 small.setLayout(null);
-                small.setLocation(720, 375);
+                small.setLocation(550, 375);
                 small.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
                 //fac fereastra vizibila
                 small.setVisible(true);
 
-                Fundal funal2 = new Fundal(small);
+                small.setBackground(Color.WHITE);
+
                 break;
+
             case 3:
                 JFrame great = new JFrame("Oh, on!");
 
@@ -69,44 +72,44 @@ public class Notice {
                 Text greater = new Text(great, 10, 20, "Your Guess Number is Greater.", 1700, 50);
 
                 //setez dimensiunea ferestrei
-                great.setUndecorated(true);
                 great.setSize(500, 300);
                 great.setLayout(null);
-                great.setLocation(720, 375);
+                great.setLocation(550, 375);
                 great.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
                 //fac fereastra vizibila
                 great.setVisible(true);
 
-                Fundal funal3 = new Fundal(great);
-                break;
-
-            case 4:
-                JFrame maximum = new JFrame("You lost!");
-
-                //setez icon-ul ferestrei
-                Image icon4 = Toolkit.getDefaultToolkit().getImage("src/main/resources/icon.png");
-                maximum.setIconImage(icon4);
-
-                //centreaza fereastra
-                maximum.setLocation(-10, 0);
-
-                //Text
-                Text lost = new Text(maximum, 10, 20, "You have exceeded the maximum attempt. Try Again", 1700, 50);
-
-                //setez dimensiunea ferestrei
-                maximum.setUndecorated(true);
-                maximum.setSize(500, 300);
-                maximum.setLayout(null);
-                maximum.setLocation(720, 375);
-                maximum.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-
-                //fac fereastra vizibila
-                maximum.setVisible(true);
-
-                Fundal funal4 = new Fundal(maximum);
+                great.setBackground(Color.WHITE);
 
                 break;
         }
+    }
+
+    void SetLost(int number) {
+        JFrame maximum = new JFrame("You lost!");
+
+        //setez icon-ul ferestrei
+        Image icon4 = Toolkit.getDefaultToolkit().getImage("src/main/resources/icon.png");
+        maximum.setIconImage(icon4);
+
+        //centreaza fereastra
+        maximum.setLocation(-10, 0);
+
+        //Text
+        Text lost = new Text(maximum, 10, 20, "You have exceeded the maximum", 1700, 50);
+        Text lost2 = new Text(maximum, 10, 60, "attempt.The number was " + number + ".", 1700, 50);
+        Text lost3 = new Text(maximum, 10, 100, "Try Again", 1700, 50);
+
+        //setez dimensiunea ferestrei
+        maximum.setSize(500, 300);
+        maximum.setLayout(null);
+        maximum.setLocation(550, 375);
+        maximum.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+
+        //fac fereastra vizibila
+        maximum.setVisible(true);
+
+        maximum.setBackground(Color.WHITE);
     }
 }

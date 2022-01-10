@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Fundal {
-    Fundal(JFrame frame){
+    Fundal(JFrame frame) {
         ImageIcon fundalIcon = new ImageIcon("src/main/resources/fundal.png");
         Image fundal = fundalIcon.getImage();
         Image newfundal = fundal.getScaledInstance(1940, 1080, java.awt.Image.SCALE_SMOOTH);
